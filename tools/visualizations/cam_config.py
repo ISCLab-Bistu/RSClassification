@@ -1,0 +1,12 @@
+config = '../../configs/resnet/raman_cell_spectrum.py'  # Model configuration file
+spectrum = 'tools/visualizations/data/cell.csv'   # Visualized Raman spectral data
+checkpoint = './model_path/cell.pth'              # Visual model path
+device = 'cuda'
+target_layers = False
+preview_model = False
+method = 'GradCAM'
+target_category = False
+eigen_smooth = False
+aug_smooth = False
+save_path = False
+vit_like = False

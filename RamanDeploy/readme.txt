@@ -1,0 +1,4 @@
+1. exe folder contains Model deployment exe files that can be run directly, including the corresponding Model (onnx model), csv (sample test dataset), and onnxruntime folder
+2. The source code of Model deployment software is stored in src, and the software is written in QT and C++ (the model path needs to be configured when modifying the source code)
+If you find that it cannot start normally, please check whether the dll file in the exe exists (downloaded in Microsoft Visual Studio)
+The onnxruntime related folder is the onnxruntime official runtime library, which is responsible for onnx model inference. Users must ensure that the official library is imported when using it

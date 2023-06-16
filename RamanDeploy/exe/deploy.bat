@@ -1,0 +1,1 @@
+C:\Windows\System32\cmd.exe /A /Q /K C:\Qt\6.2.4\msvc2019_64\bin\qtenv2.bat
