@@ -496,7 +496,7 @@ The related models are all under rmsm/models, which mainly include backbones, ne
 
 The tools package has a number of utility classes that you can use.
 
-|        工具名称         |               描述                |
+|        Tool name         |              Describe                |
 |:-------------------:|:-------------------------------:|
 |    analyze_logs     |  Log analysis, plot log curves  |
 |   analyze_results   |         Result analysis         |
