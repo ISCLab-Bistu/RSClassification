@@ -221,12 +221,16 @@ void MainWindow::on_pushButton_17_clicked()
 
     file.close(); // Close the file when you're done
 
-    //    FILE* f1 =fopen("covid.onnx","rb");
-    //    fclose(f1);
     // resnet50
     load_onnx *loadonnx = new load_onnx();
 
     QString modelPath ="Model/" + comboxDataset + "/" + comboxModel + ".onnx";
+    QFile file_model(modelPath);
+    if(!file_model.exists())
+    {
+        QMessageBox::information(this,"Information","ONNX file does not exist, please check that your file path is correct");
+        return;
+    }
     int classesPath = comboxDataset.mid(comboxDataset.length()-2, 1).toInt();
     QList<float> onnx_result = loadonnx->inferenceModel(spectrumList, modelPath, classesPath);
 
