@@ -510,7 +510,7 @@ The tools package has a number of utility classes that you can use.
 |      vis_model      |         Visualize model         |
 
 In addition to the above tools, this framework provides deployment model (currently ONNX model) software testing
-example, located in the [RamanDeploy](/RamanDeploy/)Under a folder
+example, located in the [RamanDeploy](/RamanDeploy/) Under a folder
 
 ## Acknowledgement
 
