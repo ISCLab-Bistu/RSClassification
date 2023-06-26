@@ -488,7 +488,7 @@ tools包下有许多工具类，可以使用。
 |       vis_cam       |   grad-cam可视化一维模型   |
 |      vis_model      |        模型可视化        |
 
-除了以上工具，本框架还提供了模型部署（目前是ONNX模型）软件测试示例，位于[RamanDeploy](https://github.com/ISCLab-Bistu/RSClassification/RamanDeploy) 文件夹下
+除了以上工具，本框架还提供了模型部署（目前是ONNX模型）软件测试示例，位于[RamanDeploy](https://github.com/ISCLab-Bistu/RSClassification/tree/master/RamanDeploy) 文件夹下
 
 ## Acknowledgement
 本项目中的代码借鉴了[mmpretrain](https://github.com/open-mmlab/mmpretrain)
