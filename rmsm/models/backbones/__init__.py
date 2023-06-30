@@ -9,9 +9,10 @@ from .vgg import VGG
 from .efficientnet import EfficientNet
 from .transformer import Ml4fTransformer
 from .googlenet import GoogLeNet
+from .densenet import DenseNet
 
 __all__ = [
     'AlexNet', 'ResNet', 'Ml4fTransformer', 'MobileNetV2',
     'VGG', 'MobileNetV3', 'EfficientNet', 'GoogLeNet',
-    'ResNetV2', 'ResNet50'
+    'ResNetV2', 'ResNet50', 'DenseNet'
 ]
