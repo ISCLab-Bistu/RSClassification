@@ -437,38 +437,39 @@ python tools/train.py ${CONFIG_FILE} [ARGS]
 <details open>
 <summary>支持的主干网络</summary>
 
-- [x] [AlexNet](https://github.com/ISCLab-Bistu/RSClassification/rmsm/models/backbons/alexnet.py)
-- [x] [ResNet](https://github.com/ISCLab-Bistu/RSClassification/rmsm/models/backbons/resnet.py)
-- [x] [ResNetV2](https://github.com/ISCLab-Bistu/RSClassification/rmsm/models/backbons/resnet_v2.py)
-- [x] [EfficientNet](https://github.com/ISCLab-Bistu/RSClassification/rmsm/models/backbons/efficientnet.py)
-- [x] [MobileNet](https://github.com/ISCLab-Bistu/RSClassification/rmsm/models/backbons/mobilenet.py)
-- [x] [VGG](https://github.com/ISCLab-Bistu/RSClassification/rmsm/models/backbons/vgg.py)
-- [x] [Transformer](https://github.com/ISCLab-Bistu/RSClassification/rmsm/models/backbons/transformer.py)
+- [x] [AlexNet](https://github.com/ISCLab-Bistu/RSClassification/tree/master/rmsm/models/backbones/alexnet.py)
+- [x] [ResNet](https://github.com/ISCLab-Bistu/RSClassification/tree/master/rmsm/models/backbones/resnet.py)
+- [x] [ResNetV2](https://github.com/ISCLab-Bistu/RSClassification/tree/master/rmsm/models/backbones/resnet_v2.py)
+- [x] [GoogLeNet](https://github.com/ISCLab-Bistu/RSClassification/tree/master/rmsm/models/backbones/googlenet.py)
+- [x] [EfficientNet](https://github.com/ISCLab-Bistu/RSClassification/tree/master/rmsm/models/backbones/efficientnet.py)
+- [x] [MobileNet](https://github.com/ISCLab-Bistu/RSClassification/tree/master/rmsm/models/backbones/mobilenet.py)
+- [x] [VGG](https://github.com/ISCLab-Bistu/RSClassification/tree/master/rmsm/models/backbones/vgg.py)
+- [x] [Transformer](https://github.com/ISCLab-Bistu/RSClassification/tree/master/rmsm/models/backbones/transformer.py)
 
 </details>
 
 <details open>
 <summary>支持的颈网络</summary>
 
-- [x] [Global Average Pooling](https://github.com/ISCLab-Bistu/RSClassification/rmsm/models/backbons/gap.py)
-- [x] [Generalized Mean Pooling](https://github.com/ISCLab-Bistu/RSClassification/rmsm/models/backbons/gem.py)
+- [x] [Global Average Pooling](https://github.com/ISCLab-Bistu/RSClassification/tree/master/rmsm/models/necks/gap.py)
+- [x] [Generalized Mean Pooling](https://github.com/ISCLab-Bistu/RSClassification/tree/master/rmsm/models/necks/gem.py)
 
 </details>
 
 <details open>
 <summary>支持的分类头</summary>
 
-- [x] [ClsHead](https://github.com/ISCLab-Bistu/RSClassification/rmsm/models/backbons/cls_head.py)
-- [x] [LinearHead](https://github.com/ISCLab-Bistu/RSClassification/rmsm/models/backbons/linear_head.py)
+- [x] [ClsHead](https://github.com/ISCLab-Bistu/RSClassification/tree/master/rmsm/models/heads/cls_head.py)
+- [x] [LinearHead](https://github.com/ISCLab-Bistu/RSClassification/tree/master/rmsm/models/heads/linear_head.py)
 
 </details>
 
 <details open>
 <summary>支持的损失函数</summary>
 
-- [x] [CrossEntropyLoss](https://github.com/ISCLab-Bistu/RSClassification/rmsm/models/backbons/cross_entropy_loss.py)
-- [x] [FocalLoss](https://github.com/ISCLab-Bistu/RSClassification/rmsm/models/backbons/focal_loss.py)
-- [x] [AsymmetricLoss](https://github.com/ISCLab-Bistu/RSClassification/rmsm/models/backbons/asymmetric_loss.py)
+- [x] [CrossEntropyLoss](https://github.com/ISCLab-Bistu/RSClassification/tree/master/rmsm/models/losses/cross_entropy_loss.py)
+- [x] [FocalLoss](https://github.com/ISCLab-Bistu/RSClassification/tree/master/rmsm/models/losses/focal_loss.py)
+- [x] [AsymmetricLoss](https://github.com/ISCLab-Bistu/RSClassification/tree/master/rmsm/models/losses/asymmetric_loss.py)
 
 </details>
 
