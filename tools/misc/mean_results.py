@@ -23,7 +23,7 @@ for f in file_list:
         # Read file
         result = json.load(file)
         # Accuracy
-        accuracy_top.append(result.get('accuracy1_top-1'))
+        accuracy_top.append(result.get('accuracy_top-1'))
         # Precision
         precision.append(result.get('precision'))
         # Recall
