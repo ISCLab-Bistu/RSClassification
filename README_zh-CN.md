@@ -3,7 +3,7 @@
 [English](/README.md) | 简体中文
 
 RSClassification 是一款基于 PyTorch
-的针对于拉曼光谱开源深度学习框架，其可以帮助用户快速进行拉曼光谱深度学习模型训练。本框架已经投稿至Spectrochimica Acta Part A: Molecular and Biomolecular Spectroscopy期刊中。（本框架参考了OpenMMLab项目中的[MMClassification](https://mmclassification.readthedocs.io/zh_CN/latest/)
+的针对于拉曼光谱开源深度学习框架，其可以帮助用户快速进行拉曼光谱深度学习模型训练。本框架已经投稿至Microchemical Journal期刊中。（本框架参考了OpenMMLab项目中的[MMClassification](https://mmclassification.readthedocs.io/zh_CN/latest/)
 项目，更加详细的教程可以在其中找到）
 
 其大致的架构图如下图所示：
