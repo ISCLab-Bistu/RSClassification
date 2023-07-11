@@ -4,7 +4,7 @@ English | [简体中文](/README_zh-CN.md)
 
 RSClassification is a PyTorch based open source deep learning framework for Raman spectroscopy, which can help users
 quickly train Raman spectroscopy deep learning models.
-This framework has been submitted for publication in the journal Spectrochimica Acta Part A: Molecular and Biomolecular Spectroscopy.
+This framework has been submitted for publication in the journal Microchemical Journal.
 (in this framework reference OpenMMLab project [MMClassification](https://mmclassification.readthedocs.io/zh_CN/latest/)
 project, more detailed tutorial can be found in them)
 
