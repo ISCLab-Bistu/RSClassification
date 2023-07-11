@@ -7,8 +7,6 @@ from rmsm.utils.parrots_wrapper import _BatchNorm
 from ..builder import BACKBONES
 from .base_backbone import BaseBackbone
 
-from torchvision import models
-
 
 def make_vgg_layer(in_channels,
                    out_channels,
