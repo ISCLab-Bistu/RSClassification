@@ -7,7 +7,7 @@ from ..builder import PIPELINES
 
 @PIPELINES.register_module()
 class AddNoise(object):
-    def __init__(self, num=None, noise_std=0.1, **kwargs):
+    def __init__(self, num=None, noise_std=0.03, **kwargs):
         self.kwargs = kwargs
         self.num_new_data = num
         self.noise_std = noise_std
@@ -34,7 +34,8 @@ class AddNoise(object):
             else:
                 k = indices[i]
             original_spectrum = spectrum[k]
-            noise = np.random.normal(scale=self.noise_std, size=original_spectrum.shape)
+            noise_std = self.noise_std * np.std(original_spectrum)
+            noise = np.random.normal(scale=noise_std, size=original_spectrum.shape)
             new_data = original_spectrum + noise
             result_spectrum.append(new_data)
             result_label.append(labels[k])
