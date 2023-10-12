@@ -32,13 +32,8 @@ for i in range(num_new_data):
         k = indices[i]
     original_spectrum = spectrum[k]
     # print(original_spectrum)
-    noise_std = 0.01 * np.std(original_spectrum)
+    noise_std = 0.03 * np.std(original_spectrum)
     noise = np.random.normal(scale=noise_std, size=original_spectrum.shape)
-    # random_list = list(range(0, len(noise)))
-    # plt.plot(random_list, noise)
-    # plt.show()
-    # print(noise)
-    # p
     new_data = original_spectrum + noise
     new_spectrum.append(new_data)
     new_labels.append(labels[k])
