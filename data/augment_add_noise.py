@@ -13,8 +13,6 @@ print(spectrum.shape)
 print(labels.shape)
 
 # The standard deviation of Gaussian white noise for each Raman shift
-noise_std = 0.5
-
 length_label = len(labels)
 indices = list(range(length_label))
 random.shuffle(indices)
