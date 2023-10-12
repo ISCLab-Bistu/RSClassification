@@ -19,6 +19,8 @@ length_label = len(labels)
 indices = list(range(length_label))
 random.shuffle(indices)
 
+# The mobile Raman spectrum is considered in different intervals
+move_ranges = [(200, 400), (400, 500), (500, 600), (600, 650)]
 
 num_new_data = 100
 new_spectrum = []
@@ -30,9 +32,12 @@ for i in range(num_new_data):
     else:
         k = indices[i]
     original_spectrum = spectrum[k]
+    new_data = original_spectrum.copy()
 
     shift = np.random.randint(-max_shift, max_shift)
-    new_data = np.roll(original_spectrum, shift, axis=0)
+    # Randomly move the data points in the selected range left and right
+    for start, end in move_ranges:
+        new_data[start:end] = np.roll(new_data[start:end], shift, axis=0)
 
     new_spectrum.append(new_data)
     new_labels.append(labels[k])
