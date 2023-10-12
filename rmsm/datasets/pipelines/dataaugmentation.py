@@ -55,10 +55,12 @@ class AddNoise(object):
 
 @PIPELINES.register_module()
 class MoveRaman(object):
-    def __init__(self, num=None, max_shift=3, **kwargs):
+    def __init__(self, num=None, max_shift=3, move_ranges=[(200, 400), (400, 500), (500, 600), (600, 650)], **kwargs):
         self.kwargs = kwargs
         self.num_new_data = num
         self.max_shift = max_shift
+        # different intervals
+        self.move_ranges = move_ranges
 
     def __call__(self, results):
         labels = results['labels']
@@ -71,6 +73,7 @@ class MoveRaman(object):
         indices = list(range(length_label))
         random.shuffle(indices)
 
+        # The mobile Raman spectrum is considered in different intervals
         result_spectrum = []
         result_label = []
         for i in range(length_label):
@@ -82,8 +85,12 @@ class MoveRaman(object):
             else:
                 k = indices[i]
             original_spectrum = spectrum[k]
+            shifted_data = original_spectrum.copy()
+
             shift = np.random.randint(-self.max_shift, self.max_shift)
-            shifted_data = np.roll(original_spectrum, shift, axis=0)
+            # Randomly move the data points in the selected range left and right
+            for start, end in self.move_ranges:
+                shifted_data[start:end] = np.roll(shifted_data[start:end], shift, axis=0)
 
             result_spectrum.append(shifted_data)
             result_label.append(labels[k])
@@ -97,7 +104,8 @@ class MoveRaman(object):
     def __repr__(self):
         repr_str = (f'{self.__class__.__name__}('
                     f'num_new_data={self.num_new_data}, '
-                    f'max_shift={self.max_shift})')
+                    f'max_shift={self.max_shift}), '
+                    f'move_ranges={self.move_ranges}')
         return repr_str
 
 
