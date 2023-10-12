@@ -305,14 +305,9 @@ class Ml4fTransformer(BaseBackbone):
 
         self.encoder = Encoder_t(N_e, self.input_dim, heads, self.input_dim, d_model, dff, dropout=dropout)
 
-        self.linear_fusion = nn.Linear(self.input_dim, self.num_classes)
-        self.linear_t = nn.Linear(12, 3)
-        self.linear_s = nn.Linear(64, 307)
-
-        self.bn = nn.BatchNorm2d(100)
-
-        # token
-        self.predict = nn.Parameter(torch.randn(1, 307, 12)).to(device)
+        # self.linear_fusion = nn.Linear(self.input_dim, self.num_classes)
+        # self.linear_t = nn.Linear(12, 3)
+        # self.linear_s = nn.Linear(64, 307)
 
     def forward(self, x):
         '''
@@ -320,8 +315,6 @@ class Ml4fTransformer(BaseBackbone):
         y (batch, tar_seq_len, inp_dim_d)
         '''
         output = self.encoder(x)
-        output = output.squeeze(2)
-        output = self.linear_fusion(output)
-        output = torch.squeeze(output)
+        output = output.squeeze(1)
 
         return (output,)
