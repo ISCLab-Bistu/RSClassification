@@ -3,7 +3,6 @@ import random
 
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 
 path = './ovarian_cancer/results/ovarian_cancer.csv'
 data = pd.read_csv(path)
@@ -31,7 +30,6 @@ for i in range(num_new_data):
     else:
         k = indices[i]
     original_spectrum = spectrum[k]
-    # print(original_spectrum)
     noise_std = 0.03 * np.std(original_spectrum)
     noise = np.random.normal(scale=noise_std, size=original_spectrum.shape)
     new_data = original_spectrum + noise
