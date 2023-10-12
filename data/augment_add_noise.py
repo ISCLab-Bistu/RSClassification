@@ -3,8 +3,9 @@ import random
 
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
-path = './ovarian_cancer/sers/ovarian_cancer.csv'
+path = './ovarian_cancer/results/ovarian_cancer.csv'
 data = pd.read_csv(path)
 raman_type = data.iloc[1:, 0:1].values
 labels = data.iloc[1:, 1:2].values
@@ -30,7 +31,14 @@ for i in range(num_new_data):
     else:
         k = indices[i]
     original_spectrum = spectrum[k]
+    # print(original_spectrum)
+    noise_std = 0.01 * np.std(original_spectrum)
     noise = np.random.normal(scale=noise_std, size=original_spectrum.shape)
+    # random_list = list(range(0, len(noise)))
+    # plt.plot(random_list, noise)
+    # plt.show()
+    # print(noise)
+    # p
     new_data = original_spectrum + noise
     new_spectrum.append(new_data)
     new_labels.append(labels[k])
