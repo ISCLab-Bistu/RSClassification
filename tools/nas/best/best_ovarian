@@ -1,0 +1,6 @@
+ovarian_best_genotype = "Genotype(normal=[[('dil_conv_5x5', 0), ('dil_conv_5x5', 1)], " \
+                "[('sep_conv_3x3', 2), ('sep_conv_3x3', 0)], [('dil_conv_3x3', 0), " \
+                "('dil_conv_5x5', 3)], [('skip_connect', 3), ('skip_connect', 4)]], " \
+                "normal_concat=range(2, 6), reduce=[[('avg_pool_3x3', 0), ('skip_connect', 1)], " \
+                "[('dil_conv_3x3', 1), ('skip_connect', 0)], [('dil_conv_5x5', 3), ('sep_conv_3x3', 2)], " \
+                "[('dil_conv_5x5', 4), ('dil_conv_3x3', 1)]], reduce_concat=range(2, 6))"
