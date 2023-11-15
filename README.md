@@ -512,6 +512,15 @@ The tools package has a number of utility classes that you can use.
 In addition to the above tools, this framework provides deployment model (currently ONNX model) software testing
 example, located in the [RamanDeploy](/RamanDeploy/) Under a folder
 
+##  Downloading Data and RamanDeploy Files 
+We have provided a simple batch script to download our data file `data.zip` or RamanDeploy file `ramandeployexe.zip` from the GitHub releases.
+
+### How to Use the Download Script
+
+1. **Download the Script**: Download the `download_data.bat` or `download_RamanDeploy.bat` script from our repository.
+2. **Run the Script**: Double-click on the script file to run it. The script will automatically download the `data.zip` or `ramandeployexe.zip` file from our GitHub release.
+3. **Check the Downloaded File**: After the script finishes, check the directory where you ran the script for the `data.zip` or `ramandeployexe.zip` file.
+
 ## Acknowledgement
 
 The code in this project is borrowed from [mmpretrain](https://github.com/open-mmlab/mmpretrain).

@@ -491,6 +491,14 @@ tools包下有许多工具类，可以使用。
 
 除了以上工具，本框架还提供了模型部署（目前是ONNX模型）软件测试示例，位于[RamanDeploy](/RamanDeploy/) 文件夹下
 
+## 下载数据和RamanDeploy文件
+我们提供了一个简单的批处理脚本，可以从GitHub版本中下载数据文件`data.zip`或RamanDeploy文件`ramandeployex .zip`。
+
+### 如何使用下载脚本
+1. **下载脚本**:从我们的仓库中下载`download_data.bat`或`download_RamanDeploy.bat`脚本。
+2. **运行脚本**:双击脚本文件运行它。该脚本会自动从GitHub版本中下载`data.zip`或`ramandeployex .zip`文件。 
+3. **检查下载的文件**:脚本执行完毕后，检查运行`data.zip`或` ramandeployment .zip`脚本的目录。
+
 ## Acknowledgement
 本项目中的代码借鉴了[mmpretrain](https://github.com/open-mmlab/mmpretrain)
 
