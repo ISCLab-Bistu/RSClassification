@@ -7,29 +7,29 @@ from rmsm.cnn.utils import get_model_complexity_info
 from rmsm.models import build_classifier
 
 
-def parse_args():
-    parser = argparse.ArgumentParser(description='Get model flops and params')
-    parser.add_argument('config', help='config file path')
-    parser.add_argument(
-        '--shape',
-        type=int,
-        nargs='+',
-        default=[1412],
-        help='input data size')
-    args = parser.parse_args()
-    return args
+# def parse_args():
+#     parser = argparse.ArgumentParser(description='Get model flops and params')
+#     parser.add_argument('config', help='config file path')
+#     parser.add_argument(
+#         '--shape',
+#         type=int,
+#         nargs='+',
+#         default=[1412],
+#         help='input data size')
+#     args = parser.parse_args()
+#     return args
 
+def main(filepath):
 
-def main():
+    # args = parse_args()
+    #
+    # if len(args.shape) == 1:
+    #     input_shape = (1, args.shape[0])
+    # else:
+    #     raise ValueError('invalid input shape')
 
-    args = parse_args()
-
-    if len(args.shape) == 1:
-        input_shape = (1, args.shape[0])
-    else:
-        raise ValueError('invalid input shape')
-
-    cfg = Config.fromfile(args.config)
+    cfg = Config.fromfile(filepath)
+    input_shape = (1, 38)
     model = build_classifier(cfg.model)
     model.eval()
 
@@ -50,4 +50,5 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    filepath = "../../configs/nas/raman_beihang_MW.py"
+    main(filepath)
