@@ -1,9 +1,0 @@
-requests
-rich
-scipy
-addict
-yapf
-regex
-yaml
-torchinfo
-popart
