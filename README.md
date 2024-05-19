@@ -8,6 +8,8 @@ This framework has been submitted for publication in the journal Microchemical J
 (in this framework reference OpenMMLab project [MMClassification](https://mmclassification.readthedocs.io/zh_CN/latest/)
 project, more detailed tutorial can be found in them)
 
+If our framework is useful to you, we recommend quoting our [paper](https://doi.org/10.1016/j.microc.2024.109990): Yu M, Li L, You R,  et al. A general framework for qualitative analysis of Raman spectroscopy based on deep learning[J]. Microchemical  Journal, 2024, 199: 109990.
+
 The approximate architecture is shown in the following figure:
 
 ![config.png](demo/english/config.png)
